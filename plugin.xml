@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-waves" version="0.2.3">
+    <name>Waves</name>
+    <description>Cordova Waves Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,waves</keywords>
+    <js-module src="www/waves.js" name="waves">
+        <clobbers target="waves" />
+    </js-module>
+    <!--<platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Waves">
+                <param name="ios-package" value="CDVWaves"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVWaves.h" />
+        <source-file src="src/ios/CDVWaves.m" />
+    </platform>-->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Waves">
+                <param name="android-package" value="org.apache.cordova.plugin.Waves"/>
+            </feature>
+        </config-file>
+    </platform>
+</plugin>
