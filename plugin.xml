@@ -1,27 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-waves" version="0.2.3">
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="com.ventuarylab.waves"
+    version="0.7.0">
     <name>Waves</name>
-    <description>Cordova Waves Plugin</description>
-    <license>Apache 2.0</license>
-    <keywords>cordova,waves</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+    <asset src="www/waves.js" target="js/waves.js"/>
+
     <js-module src="www/waves.js" name="waves">
         <clobbers target="waves" />
     </js-module>
-    <!--<platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Waves">
-                <param name="ios-package" value="CDVWaves"/>
-            </feature>
-        </config-file>
-        <header-file src="src/ios/CDVWaves.h" />
-        <source-file src="src/ios/CDVWaves.m" />
-    </platform>-->
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Waves">
-                <param name="android-package" value="org.apache.cordova.plugin.Waves"/>
+                <param name="android-package" value="com.ventuarylab.waves.Waves"/>
             </feature>
         </config-file>
+
+        <source-file src="src/android/Waves.java" target-dir="src/com/ventuarylab/waves/"/>
     </platform>
+
 </plugin>

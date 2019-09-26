@@ -1,8 +1,7 @@
-window.waves = function(str, callback) {
-    cordova.exec(callback, function(err) {
-        callback('Nothing to echo.');
-    }, "Waves", "echo", [str]);
+/*global cordova, module*/
+
+module.exports = {
+    greet: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Hello", "greet", [name]);
+    }
 };
-
-
-cordova.exec(function(a) {console.log(a)}, function(err) {}, "Waves", "echo", ['qwe']);
